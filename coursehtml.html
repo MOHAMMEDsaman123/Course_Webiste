@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+
+<head></head>
+<style>
+    body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(145deg, #101114, #1c1e22);
+    margin: 0;
+    padding: 20px;
+    color: #ffffff;
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    padding: 50px;
+    background: linear-gradient(to right, #2d2f36, #1b1c1f);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-image 2s ease-in-out;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.heading h1 {
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+}
+.course-enrolled{
+    position: absolute;
+    
+    right: 20px;
+    top: 250px;
+
+    
+    color: white;
+    font-size: 14px;
+    font-weight: lighter;
+    padding: 6px 12px;
+    border-radius: 6px;
+    
+    z-index: 10;
+}
+
+
+.course-cart {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.cont {
+    width: 300px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.cont:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+.course-img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.course-content {
+    padding: 16px;
+}
+
+.course-instructor {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 10px;
+}
+
+.course-heading {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.details h6 {
+    font-size: 13px;
+    font-weight: normal;
+    color: #cccccc;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+.course-button1 {
+    text-align: center;
+    padding: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.course-button1 .view {
+    padding: 10px 24px;
+     background: linear-gradient(to right, #ED5EF2, #4E0CD1);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 15px;
+    border: 1px solid #ed9bde;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 0 0 transparent;
+}
+.Free {
+    position: absolute;
+    top: 185px; 
+    right: 20px;
+    background: linear-gradient(to right,#ED5EF2, #4E0CD1); 
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    animation: slider 2s ease-in-out infinite alternate;
+}
+@keyframes slider {
+    from{
+        transform: translateX(10px);
+
+    }
+    to{
+        transform: translateX(0px);
+
+    }
+    
+}
+
+
+.course-button1 .view:hover {
+     background: linear-gradient(to right, #4E0CD1, #ED5EF2);
+   
+    transform: scale(1.05);
+}
+
+
+
+
+
+</style>
+
+<body>
+    <div class="heading">
+        <h1 class="course">SQLNest Recorded Courses</h1>
+    </div>
+    <div class="course-cart js"></div>
+    
+    <script src="./course_card.js" type="module"></script>
+    
+</body>
